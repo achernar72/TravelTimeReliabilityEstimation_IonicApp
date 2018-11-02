@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Reliable Navigation
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="floating-panel">
+    <b align = center> select route </b>
+    <select [(ngModel)]="start" id="start" (onchange)="calculateAndDisplayRoute()" >
+
+      <option >Chicago to Boston</option>
+      <option >LA to Boston</option>
+
+    </select><br>
+
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MMMM YYYY" min="2016" max="2020-10-31" [(ngModel)]="myDate">
+      </ion-datetime>
+    </ion-item>
+
+
+
+
+  </div>
+  <div #map id="map"></div>
+
+</ion-content>
+
