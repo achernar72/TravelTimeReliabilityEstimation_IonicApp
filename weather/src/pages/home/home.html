@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ionic Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-grid *ngIf="weather">
+    <ion-row >
+      <ion-col width-50 offset-25>
+        <button ion-button full > Get</button>
+        <h2 class="location">{{weather.display_location.full}}</h2>
+        <div class="icon"><img src="{{weather.icon_url}}" alt=""></div>
+        <h3 class="desc">{{weather.weather}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
